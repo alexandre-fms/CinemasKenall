@@ -24,7 +24,4 @@ public class Cinemas {
     private int cinemaZipCode;
     private String cinemaCity;
 
-    @OneToMany(mappedBy = "cinemas")
-    private Collection<Movies> movie;
-
 }

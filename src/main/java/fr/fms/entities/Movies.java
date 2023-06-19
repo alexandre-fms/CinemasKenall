@@ -7,6 +7,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Data
@@ -15,6 +16,7 @@ import java.io.Serializable;
 @ToString
 public class Movies implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long movieId;
@@ -25,8 +27,5 @@ public class Movies implements Serializable {
 
     @ManyToOne
     private Categories categories;
-
-    @ManyToOne
-    private Cinemas cinemas;
 
 }
